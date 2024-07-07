@@ -61,7 +61,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;TOGGLELAYERS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>sdk/;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../IncludingFile/aviutl_exedit_sdk</AdditionalIncludeDirectories>
       <AdditionalOptions>/source-charset:utf-8 /execution-charset:shift_jis %(AdditionalOptions)</AdditionalOptions>
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>

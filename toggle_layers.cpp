@@ -30,7 +30,7 @@ using namespace ExEdit;
 inline constinit struct ExEdit092 {
 	AviUtl::FilterPlugin* fp;
 	decltype(fp->func_WndProc) func_wndproc;
-	constexpr static const char* info_exedit092 = "拡張編集(exedit) version 0.92 by ＫＥＮくん";
+	constexpr static const char* info_exedit092 = "Adv. Editing(exedit) version 0.92 by Mr. Ken";
 	bool init(AviUtl::FilterPlugin* this_fp)
 	{
 		if (fp != nullptr) return true;
@@ -754,7 +754,7 @@ static BOOL func_init(AviUtl::FilterPlugin* fp)
 {
 	// 情報源確保．
 	if (!exedit.init(fp)) {
-		::MessageBoxA(nullptr, "拡張編集0.92が見つかりませんでした．",
+		::MessageBoxA(nullptr, "Advanced Editing 0.92 was not found.",
 			fp->name, MB_OK | MB_ICONEXCLAMATION);
 		return FALSE;
 	}
@@ -791,7 +791,7 @@ BOOL WINAPI DllMain(HINSTANCE hinst, DWORD fdwReason, LPVOID lpvReserved)
 ////////////////////////////////
 // 看板．
 ////////////////////////////////
-#define PLUGIN_NAME		"レイヤー一括切り替え"
+#define PLUGIN_NAME		"Layer Bulk Switching"
 #define PLUGIN_VERSION	"v1.61"
 #define PLUGIN_AUTHOR	"sigma-axis"
 #define PLUGIN_INFO_FMT(name, ver, author)	(name##" "##ver##" by "##author)
