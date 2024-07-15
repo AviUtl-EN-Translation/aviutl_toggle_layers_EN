@@ -18,7 +18,7 @@ https://github.com/user-attachments/assets/9f1be805-9476-4b1e-bdbd-bd36489bb89d
   https://hapsung.tistory.com/24
 
   - Does not work with other versions like Extended Editing 0.93rc1.
-  - Except for the English version of the link above (WebCam's version), it doesn't work with any other version.
+  - Except for the English version of the link above (WebCam's version), it may not work with any other version.
 
 - Visual C++ Redistributable Package (x86 version for [2015/2017/2019/2022] required)
 
