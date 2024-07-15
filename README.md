@@ -1,164 +1,165 @@
-# レイヤー一括切り替え AviUtl プラグイン
+# Layer Batch Switching AviUtl Plugin
 
-複数レイヤーの表示 / 非表示状態をドラッグ操作で一括に切り替えられるようになるなど，レイヤーに対するマウス操作を拡充するプラグイン．
+A plugin that enhances mouse operations for layers, allowing multiple layers to be toggled visible/invisible at once through drag operations.
 
-[ダウンロードはこちら．](https://github.com/sigma-axis/aviutl_toggle_layers/releases)
+[Download here.](https://github.com/AviUtl-EN-Translation/aviutl_toggle_layers_EN/releases)
 
-![一括切り替えのデモ](https://github.com/sigma-axis/aviutl_toggle_layers/assets/132639613/dc4cd6d3-e295-47d8-be84-5ae6653b494f)
+<img src="https://github.com/user-attachments/assets/711e5afe-2f6b-4dc1-9d3e-1ac6e593c065"  height="600"/>
 
-https://github.com/sigma-axis/aviutl_toggle_layers/assets/132639613/63deb25e-f931-49f6-92c0-a3dbc9b4ea90
+https://github.com/user-attachments/assets/98b5af15-93f1-4670-817e-d26e1d148987
 
-https://github.com/sigma-axis/aviutl_toggle_layers/assets/132639613/0fc36ad1-d997-4882-9916-8b49dd24791c
-
-
-## 動作要件
-
-- AviUtl 1.10 + 拡張編集 0.92
-
-  http://spring-fragrance.mints.ne.jp/aviutl
-
-  - 拡張編集 0.93rc1 等の他バージョンでは動作しません．
-
-- Visual C++ 再頒布可能パッケージ（\[2015/2017/2019/2022\] の x86 対応版が必要）
-
-  https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist
-
-- **(推奨)** patch.aul r43 謎さうなフォーク版60 以降
-
-  https://github.com/nazonoSAUNA/patch.aul
-
-  - レイヤーのドラッグ移動操作とレイヤー名変更を繰り返した後「元に戻す」を行うとレイヤー名がおかしくなる不具合が修正されます．
-
-## 導入方法
-
-以下のフォルダのいずれかに `toggle_layers.auf` と `toggle_layers.ini` をコピーしてください．
-
-1. `aviutl.exe` のあるフォルダ
-1. (1) のフォルダにある `plugins` フォルダ
-1. (2) のフォルダにある任意のフォルダ
+https://github.com/user-attachments/assets/9f1be805-9476-4b1e-bdbd-bd36489bb89d
 
 
-## 使い方
+## Requirementー
 
-初期設定で以下の操作ができます (`Ctrl`, `Shift`, `Alt` の修飾キーは指定されているもの以外を離している必要があります):
+- AviUtl 1.10 + Extended Editing 0.92
 
-- タイムライン左側のレイヤーボタンを左クリックドラッグで操作すると，カーソルの通った範囲が全て表示 / 非表示状態に切り替わります．
+  https://hapsung.tistory.com/24
 
-- `Shift` + 左クリックドラッグで，カーソルが通った範囲のロック / ロック解除が切り替わります．
+  - Does not work with other versions like Extended Editing 0.93rc1.
+  - Except for the English version of the link above (WebCam's version), it doesn't work with any other version.
 
-- `Ctrl` + 左クリックドラッグで，カーソルが通った範囲にあるレイヤー上のオブジェクトを選択 / 選択解除します．
+- Visual C++ Redistributable Package (x86 version for [2015/2017/2019/2022] required)
 
-- `Alt` + 左クリックで，カーソル位置のレイヤー名を変更するダイアログが表示されます．
+  https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170
 
-- 左ダブルクリックで，他のレイヤーを全表示したり非表示にしたりできます（右クリックメニューの「他のレイヤーを全表示/非表示」を実行）．
+- **(Recommended)** patch.aul r43 Nazo Sauna fork version 60 or later
 
-[設定ファイル](#設定ファイル)を編集すると以下の操作が使えます．修飾キーとドラッグ / ダブルクリックドラッグの組み合わせに割り当ててください:
+  https://github.com/AviUtl-EN-Translation/patch.aul_en
 
-- カーソルが通った範囲の「座標のリンク」を切り替えられます．
+  - Fixes issues where layer names may become incorrect after repeated layer drag moves and name changes followed by "undo".
 
-- カーソルが通った範囲の「上のオブジェクトでクリッピング」を切り替えられます．
+## Installation
 
-- レイヤーの内容を丸ごと上下にドラッグ移動できます．
+Copy `toggle_layers.auf` and `toggle_layers.ini` to one of the following folders:
+
+1. The folder where `aviutl.exe` is located
+1. The `plugins` folder within the folder from (1)
+1. Any folder within the folder from (2)
 
 
-## 設定ファイル
+## Usage
 
-`toggle_layers.ini` ファイルをテキストエディタで編集することで，キーの組み合わせとマウス操作に対する動作を割り当てるなどの設定ができます．詳しくはファイル内のコメントに設定方法の記述があるのでそちらをご参照ください．
+By default, the following operations are available (make sure to release any modifier keys other than those specified):
 
-- ドラッグでオブジェクト選択する機能は拡張編集の仕様上の理由から，`Ctrl` キーを含む組み合わせでのみ有効です．
+- Left-click drag on the layer button on the left side of the timeline to toggle the visibility of all layers passed by the cursor.
+
+- `Shift` + left-click drag to toggle lock/unlock of layers passed by the cursor.
+
+- `Ctrl` + left-click drag to select/deselect objects on layers passed by the cursor.
+
+- `Alt` + left-click to display a dialog to change the name of the layer at the cursor position.
+
+- Double left-click to toggle visibility of all other layers (executes "Show/Hide All Other Layers" from the right-click menu).
+
+By editing the [configuration file](#configuration-file), you can use the following operations. Assign these to combinations of modifier keys and drag/double-click drag:
+
+- Toggle "Coordinate Link" for layers passed by the cursor.
+
+- Toggle "Clip with Upper Object" for layers passed by the cursor.
+
+- Drag the entire content of a layer up or down.
+
+
+## Configuration File
+
+By editing the `toggle_layers.ini` file with a text editor, you can assign actions to key combinations and mouse operations. Refer to the comments in the file for detailed settings.
+
+- The object selection feature via drag only works with combinations including the `Ctrl` key due to the specifications of Extended Editing.
 
 
 ## TIPS
 
-- ドラッグ状態でタイムラインウィンドウの上端・下端をマウスカーソルが超えるとスクロールします．
+- When dragging, if the mouse cursor goes beyond the top or bottom edge of the timeline window, it will scroll.
 
-- `Ctrl`, `Shift`, `Alt` はドラッグ開始時に押していれば，ドラッグの最中に離しても OK です．ただし `Ctrl` を離すとオブジェクト選択は一旦解除されます．
+- As long as `Ctrl`, `Shift`, `Alt` are pressed when starting the drag, you can release them during the drag. However, releasing `Ctrl` will temporarily deselect objects.
 
-- ダブルクリックに操作を割り当てている場合でもシングルクリックによる動作が実行されます．シングルクリックによる動作を無効化したい場合は，設定ファイルを編集して当該項目に「本当に何もしない」を割り当ててください．
+- Even if an operation is assigned to double-click, the action for single-click will still execute. If you want to disable the single-click action, edit the configuration file and assign "Do nothing at all" to the respective item.
 
 
-## 既知の不具合
+## Known Issues
 
-- レイヤーのドラッグ移動とレイヤー名変更を繰り返した後「元に戻す」をすると，レイヤー名がきちんと元に戻らなかったり全く別の名前になったりすることがあります．[patch.aul r43 謎さうなフォーク版60 以降](https://github.com/nazonoSAUNA/patch.aul) の導入で修正されます．
+- After repeated layer drag moves and name changes followed by "undo", layer names may not revert correctly or may change to completely different names. This can be fixed by using [patch.aul r43 Nazo Sauna fork version 60 or later](https://github.com/AviUtl-EN-Translation/patch.aul_en).
 
-## 改版履歴
+## Change Log
 
 - **v1.61** (2024-06-08)
 
-  - ルート以外のシーンでレイヤーを丸ごとドラッグした場合，レイヤー名などの設定が移動せず，代わりにルートシーンで移動が起こっていたバグを修正．
+  - Fixed a bug where dragging an entire layer in a non-root scene did not move layer names and other settings, instead causing movement in the root scene.
 
 - **v1.60** (2024-06-07)
 
-  - ダブルクリックやダブルクリックドラッグにも操作を割り当てられるように拡張．
+  - Extended to allow assignment of operations to double-click and double-click drag.
 
-    設定ファイルに `[double_click]` のセクションを追加しました．割り当ての変更はこの項目でできます．設定を引き継ぐ場合は同梱の `.ini` ファイルを参考にして追記してください．
+    Added a `[double_click]` section to the configuration file. Change assignments in this section. If you want to inherit settings, refer to the included `.ini` file and add the necessary entries.
 
-    - 初期状態で「他のレイヤーを全表示/非表示」が割り当てられています．
+    - Initially assigned to "Show/Hide All Other Layers".
 
-  - マウスを表示範囲外までドラッグ移動した場合の自動スクロールの挙動を改善．マウスを動かさなくてもスクロールが継続するように．
+  - Improved auto-scroll behavior when dragging the mouse beyond the display range. Scrolling continues even without moving the mouse.
 
-  - 自動スクロールの有効/無効やスピードを設定できるように．
+  - Made it possible to set auto-scroll enable/disable and speed.
 
-    設定ファイルに `[scroll]` のセクションを追加しました．設定の変更はこの項目でできます．設定を引き継ぐ場合は同梱の `.ini` ファイルを参考にして追記してください．
+    Added a `[scroll]` section to the configuration file. Change settings in this section. If you want to inherit settings, refer to the included `.ini` file and add the necessary entries.
 
 - **v1.50** (2024-06-06)
 
-  - レイヤーの内容を丸ごと上下にドラッグ移動する機能を追加．
+  - Added a feature to drag the entire content of a layer up or down.
 
-  - 設定ファイルの仕様を微変更．ファイル冒頭の `[key_combination]` を `[drag]` に変更しました．
+  - Slightly changed the specification of the configuration file. Changed `[key_combination]` at the beginning of the file to `[drag]`.
 
-    **v1.40 から設定を引き継ぐ場合，この冒頭部分を書き変えてください．**
+    **If inheriting settings from v1.40, change this initial part.**
 
-  - ドラッグ中にショートカットキーコマンドなどで編集状態が変わってしまうと「元に戻す」が正しく機能しなくなっていたのを修正．編集状態の変更を見つけた場合ドラッグ操作を中止するよう変更．
+  - Fixed an issue where "undo" did not function correctly if the edit state changed via shortcut commands during drag. Now the drag operation is canceled if an edit state change is detected.
 
-  - 「他のレイヤーを全表示/非表示」で編集画面が更新していなかったのを修正．
+  - Fixed the issue where the edit screen did not update for "Show/Hide All Other Layers".
 
 - **v1.40** (2024-06-04)
 
-  - 各種修飾キーの組み合わせとレイヤー操作との対応を `.ini` ファイルで設定できるように．
+  - Made it possible to configure the combination of modifier keys and layer operations via the `.ini` file.
 
-  - レイヤーに対して行える操作を追加:
+  - Added operations for layers:
 
-    1.  「座標のリンク」の切り替え
-    1.  「上のオブジェクトでクリッピング」の切り替え
-    1.  他のレイヤーを全表示・非表示
+    1.  Toggle "Coordinate Link"
+    1.  Toggle "Clip with Upper Object"
+    1.  Show/Hide all other layers
 
 - **v1.30** (2024-06-04)
 
-  - `Alt` + クリックでレイヤー名変更のダイアログを表示する機能を追加．
+  - Added a feature to display a dialog to change the layer name via `Alt` + click.
 
 - **v1.20** (2024-05-31)
 
-  - `Ctrl` + ドラッグでレイヤー上のオブジェクトを選択 / 選択解除する機能を追加．
+  - Added a feature to select/deselect objects on layers via `Ctrl` + drag.
 
 - **v1.12** (2024-05-30)
 
-  - レイヤー番号の範囲チェック修正．
+  - Fixed layer number range check.
 
 - **v1.11** (2024-05-30)
 
-  - レイヤーをロック / ロック解除するごとに編集画像が不必要に再描画されていたのを修正．
+  - Fixed unnecessary redraw of the edit image when locking/unlocking layers.
 
 - **v1.10** (2024-05-28)
 
-  - `Shift` + ドラッグでレイヤーをロック / ロック解除する機能を追加．
+  - Added a feature to lock/unlock layers via `Shift` + drag.
 
 - **v1.02** (2024-04-26)
 
-  - コード整理，動作も少し改善．
+  - Code cleanup and minor improvements in functionality.
 
 - **v1.01** (2024-04-26)
 
-  - ドラッグ中にカーソルをウィンドウの外に大きく外しても，スクロール範囲外のレイヤーは影響を受けないように変更．
+  - Changed to prevent layers outside the scroll range from being affected when the cursor is moved far outside the window during drag.
 
 - **v1.00** (2024-04-26)
 
-  - 初版．
+  - Initial release.
 
 
-## ライセンス
+## License
 
-このプログラムの利用・改変・再頒布等に関しては MIT ライセンスに従うものとします．
+This program is licensed under the MIT License.
 
 ---
 
@@ -183,7 +184,7 @@ https://github.com/ePi5131/aviutl_exedit_sdk
 
 ---
 
-1条項BSD
+BSD 1-Clause License
 
 Copyright (c) 2022
 ePi All rights reserved.
@@ -193,10 +194,10 @@ Redistribution and use in source and binary forms, with or without modification,
 Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 THIS SOFTWARE IS PROVIDED BY ePi “AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL ePi BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#  連絡・バグ報告
+#  Contact / Bug Reports
 
 - GitHub: https://github.com/sigma-axis
 - Twitter: https://twitter.com/sigma_axis
 - nicovideo: https://www.nicovideo.jp/user/51492481
-- Misskey.io: https://misskey.io/@sigma_axis
+- - Misskey.io: https://misskey.io/@sigma_axis
 - Bluesky: https://bsky.app/profile/sigma-axis.bsky.social
