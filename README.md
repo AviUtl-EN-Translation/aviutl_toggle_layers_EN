@@ -4,6 +4,22 @@ A plugin that enhances mouse operations for layers, allowing multiple layers to 
 
 [Download here.](https://github.com/AviUtl-EN-Translation/aviutl_toggle_layers_EN/releases)
 
+## Notice
+* This plugin is an English-localized version of the original plugin developed by [蛇色 (へびいろ)](https://github.com/hebiiro).
+* All core functionality and source code are based on the original project.
+
+Original Plugin
+* https://github.com/hebiiro/anti.aviutl.ultimate.plugin
+
+Localization
+* This version includes translations and adjustments for English-speaking users.
+* All rights and credits for the original work belong to the original author.
+
+* If you are the original author and wish this localized version to be modified or removed, please feel free to contact me.
+* Redistributor - JangJe
+* Twitter - https://twitter.com/JJ_otomad
+
+
 <img src="https://github.com/user-attachments/assets/711e5afe-2f6b-4dc1-9d3e-1ac6e593c065"  height="600"/>
 
 https://github.com/user-attachments/assets/98b5af15-93f1-4670-817e-d26e1d148987
