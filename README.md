@@ -5,11 +5,11 @@ A plugin that enhances mouse operations for layers, allowing multiple layers to 
 [Download here.](https://github.com/AviUtl-EN-Translation/aviutl_toggle_layers_EN/releases)
 
 ## Notice
-* This plugin is an English-localized version of the original plugin developed by [蛇色 (へびいろ)](https://github.com/hebiiro).
+* This plugin is an English-localized version of the original plugin developed by [sigma-axis](https://github.com/sigma-axis).
 * All core functionality and source code are based on the original project.
 
 Original Plugin
-* https://github.com/hebiiro/anti.aviutl.ultimate.plugin
+* https://github.com/sigma-axis/aviutl_toggle_layers
 
 Localization
 * This version includes translations and adjustments for English-speaking users.
